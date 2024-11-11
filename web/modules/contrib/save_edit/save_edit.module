@@ -1,0 +1,135 @@
+<?php
+
+/**
+ * @file
+ * Contains save_edit.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeForm;
+
+/**
+ * Implements hook_help().
+ */
+function save_edit_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the save_edit module.
+    case 'help.page.save_edit':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Gives a &quot;Save &amp; Edit&quot; button on node pages.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function save_edit_form_alter(&$form, FormStateInterface $form_state) {
+  $form_object = $form_state->getFormObject();
+  $user = \Drupal::currentUser();
+
+  if ($user->hasPermission('use save and edit') && $form_object instanceof NodeForm) {
+    $config = \Drupal::config('save_edit.settings');
+
+    $entity = $form_object->getEntity();
+    $content_type = $entity->getType();
+
+    $enabled_node_types = !is_null($config->get('node_types')) ? $config->get('node_types') : [];
+    if (in_array($content_type, array_values($enabled_node_types), TRUE)) {
+      // Let save_edit button inherit all actions from submit action.
+      $form['actions']['save_edit'] = $form['actions']['submit'];
+      if (isset($form['actions']['submit']['#attributes']) && is_object($form['actions']['submit']['#attributes'])) {
+        $form['actions']['save_edit']['#attributes'] = clone $form['actions']['submit']['#attributes'];
+      }
+      $form['actions']['save_edit']['#value'] = $config->get('button_value');
+      $form['actions']['save_edit']['#name'] = 'save_edit';
+      foreach ($form['actions']['save_edit']['#submit'] as $key => $action) {
+        if ($action == "::submitForm") {
+          array_splice($form['actions']['save_edit']['#submit'], $key + 1, 0, ['save_edit_form_submit_presave']);
+        }
+      }
+      $form['actions']['save_edit']['#submit'][] = 'save_edit_form_submit_redirect';
+      $form['actions']['save_edit']['#weight'] = $config->get('button_weight');
+      if ($config->get('gin_primary')) {
+        $form['actions']['save_edit']['#gin_action_item'] = TRUE;
+      }
+      unset($form['actions']['save_edit']['#button_type']);
+      if ($config->get('hide_default_save')) {
+        $form['actions']['unpublish']['#access'] = FALSE;
+        $form['actions']['submit']['#access'] = FALSE;
+      }
+      if ($config->get('hide_default_publish')) {
+        $form['actions']['publish']['#access'] = FALSE;
+      }
+      if ($config->get('hide_default_preview')) {
+        $form['actions']['preview']['#access'] = FALSE;
+      }
+      if ($config->get('hide_default_delete')) {
+        $form['actions']['delete']['#access'] = FALSE;
+      }
+
+    }
+  }
+}
+
+/**
+ * The published status needs to be altered before the node is saved.
+ */
+function save_edit_form_submit_presave(&$form, FormStateInterface $form_state) {
+  $config = \Drupal::config('save_edit.settings');
+  $entity = $form_state->getFormObject()->getEntity();
+  if ($config->get('unpublish') || ($config->get('unpublish_new_only') && $entity->isNew())) {
+    $entity->setUnpublished();
+  }
+}
+
+/**
+ * We want to override the default redirect that was set in the saving process.
+ */
+function save_edit_form_submit_redirect(&$form, FormStateInterface $form_state) {
+  $entity = $form_state->getFormObject()->getEntity();
+  $toUrl = $entity->toUrl('edit-form');
+  if ($destination = \Drupal::request()->query->get('destination')) {
+    $toUrl->setRouteParameter("destination", $destination);
+  }
+  \Drupal::request()->query->remove('destination');
+  $form_state->setRedirectUrl($toUrl);
+}
+
+/**
+ * Implements hook_entity_bundle_create().
+ */
+function save_edit_entity_bundle_create($entity_type_id, $bundle) {
+  if ($entity_type_id == 'node') {
+    /** @var \Drupal\Core\Config\Config $config */
+    $config = \Drupal::configFactory()->getEditable('save_edit.settings');
+
+    // When a node content type entity is created, it is added to the save & edit configuration.
+    $node_types = $config->get('node_types');
+    if (!isset($node_types[$entity_type_id])) {
+      $node_types[$bundle] = ($config->get('enable_node_types_automatically')) ? $bundle : '0';
+      $config->set('node_types', $node_types)->save();
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_bundle_delete().
+ */
+function save_edit_entity_bundle_delete($entity_type_id, $bundle) {
+  if ($entity_type_id == 'node') {
+    /** @var \Drupal\Core\Config\Config $config */
+    $config = \Drupal::configFactory()->getEditable('save_edit.settings');
+
+    // When a node content type entity is deleted, it is removed from the save & edit configuration.
+    $node_types = $config->get('node_types');
+    if (isset($node_types[$bundle])) {
+      unset($node_types[$bundle]);
+      $config->set('node_types', $node_types)->save();
+    }
+  }
+}

@@ -1,0 +1,39 @@
+save_edit.settings:
+  type: config_entity
+  label: 'Save & Edit settings'
+  mapping:
+    button_value:
+      label: 'Text to use for Save & Edit button'
+      type: label
+    button_weight:
+      label: 'Save & Edit Button Weight'
+      type: string
+    gin_primary:
+      label: 'Display as Gin Admin theme primary actions'
+      type: boolean
+    unpublish:
+      label: 'Auto Unpublish All Nodes'
+      type: boolean
+    unpublish_new_only:
+      label: 'Auto Unpublish on New Nodes Only'
+      type: boolean
+    hide_default_save:
+      label: 'Hide default Save button'
+      type: boolean
+    hide_default_publish:
+      label: 'Hide the Publish button'
+      type: boolean
+    hide_default_preview:
+      label: 'Hide default Preview button'
+      type: boolean
+    hide_default_delete:
+      label: 'Hide default Delete button'
+      type: boolean
+    enable_node_types_automatically:
+      label: 'Enable node types automatically'
+      type: boolean
+    node_types:
+      label: 'Node types'
+      type: sequence
+      sequence:
+        type: string

@@ -1,0 +1,13 @@
+<?php
+
+// Top of the file.
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function config_log_views_views_pre_render(ViewExecutable $view) {
+  if (isset($view) && ($view->storage->id() == 'config_log')) {
+    $view->element['#attached']['library'][] = 'system/diff';
+  }
+}

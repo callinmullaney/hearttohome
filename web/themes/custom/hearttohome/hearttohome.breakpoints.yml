@@ -1,0 +1,36 @@
+hearttohome.xsmall:
+  label: xSmall
+  mediaQuery: 'all'
+  weight: 0
+  multipliers:
+    - 1x
+hearttohome.small:
+  label: Small
+  mediaQuery: 'all and (min-width: 640px)'
+  weight: 1
+  multipliers:
+    - 1x
+hearttohome.medium:
+  label: Medium
+  mediaQuery: 'all and (min-width: 960px)'
+  weight: 2
+  multipliers:
+    - 1x
+hearttohome.large:
+  label: Large
+  mediaQuery: 'all and (min-width: 1280px)'
+  weight: 3
+  multipliers:
+    - 1x
+hearttohome.xlarge:
+  label: xLarge
+  mediaQuery: 'all and (min-width: 1440px)'
+  weight: 4
+  multipliers:
+    - 1x
+hearttohome.xxlarge:
+  label: xxLarge
+  mediaQuery: 'all and (min-width: 1920px)'
+  weight: 5
+  multipliers:
+    - 1x

@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Field States UI module.
+ */
+
+declare(strict_types = 1);
+
+/**
+ * Implements hook_update_N().
+ */
+function field_states_ui_update_9001(&$sandbox) {
+  module_set_weight('field_states_ui', 200);
+}
+
+/**
+ * Implements hook_install().
+ */
+function field_states_ui_install($is_syncing) {
+  module_set_weight('field_states_ui', 200);
+}

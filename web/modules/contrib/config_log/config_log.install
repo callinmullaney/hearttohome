@@ -1,0 +1,104 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Implements hook_schema().
+ */
+function config_log_schema() {
+  $schema['config_log'] = [
+    'description' => 'The base table for configuration logging.',
+    'fields' => [
+      'clid' => [
+        'description' => 'The primary identifier for a log record.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'uid' => [
+        'description' => 'The {users}.uid that created this log entry.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'operation' => [
+        'description' => 'Config operation.',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'data' => [
+        'description' => 'A serialized configuration object data.',
+        'type' => 'blob',
+        'not null' => FALSE,
+        'size' => 'big',
+      ],
+      'originaldata' => [
+        'description' => 'A serialized configuration object original data.',
+        'type' => 'blob',
+        'not null' => FALSE,
+        'size' => 'big',
+      ],
+      'name' => [
+        'description' => 'Config object name.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'old_name' => [
+        'description' => 'For renames, the old Config object name.',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+      ],
+      'created' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Unix timestamp of when event occurred.',
+      ],
+    ],
+    'primary key' => ['clid'],
+    'indexes' => [
+      'uid' => ['uid'],
+      'name' => ['name'],
+    ],
+  ];
+  return $schema;
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function config_log_update_8001() {
+  $schema = Database::getConnection()->schema();
+  if (!$schema->fieldExists('config_log', 'created')) {
+    $spec = [
+      'type' => 'int',
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => 'Unix timestamp of when event occurred.',
+    ];
+    $schema->addField('config_log', 'created', $spec);
+  }
+}
+
+/**
+ * Creates a new column called `originaldata` to store the original configuration values before the change
+ *
+ */
+function config_log_update_8002() {
+  $schema = Database::getConnection()->schema();
+  if (!$schema->fieldExists('config_log', 'originaldata')) {
+    $spec = [
+      'description' => 'A serialized configuration object original data.',
+      'type' => 'blob',
+      'not null' => FALSE,
+      'size' => 'big',
+    ];
+    $schema->addField('config_log', 'originaldata', $spec);
+  }
+}

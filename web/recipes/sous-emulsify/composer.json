@@ -1,0 +1,23 @@
+{
+    "name": "fourkitchens/sous-emulsify",
+    "description": "A recipe that installs Emulsify dependencies and sets Emulsify as the default theme.",
+    "keywords": ["recipe", "Drupal recipes", "drupal recipe"],
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Laura Johnson",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Callin Mullaney",
+            "role": "Maintainer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "drupal/components": "^3.0@beta",
+        "drupal/emulsify": "^5.0",
+        "drupal/emulsify_tools": "^1.0"
+    }
+}

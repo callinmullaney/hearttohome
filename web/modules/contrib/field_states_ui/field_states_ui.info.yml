@@ -1,0 +1,25 @@
+name: 'Field States UI'
+type: module
+description: 'Provides a user interface for using the States API on form fields.'
+core_version_requirement: ^9.2 || ^10
+package: fields
+test_dependencies:
+  - address:address
+  - chosen:chosen_field
+  - color_field:color_field
+  - entity_reference_revisions:entity_reference_revisions
+  - geofield:geofield
+  - inline_entity_form:inline_entity_form
+  - layout_paragraphs:layout_paragraphs
+  - markup:markup
+  - paragraphs:paragraphs
+  - smart_date:smart_date
+  - select2:select2
+  - viewsreference:viewsreference
+  - webform:webform
+  - youtube:youtube
+
+# Information added by Drupal.org packaging script on 2023-05-17
+version: '3.0.0'
+project: 'field_states_ui'
+datestamp: 1684331021

@@ -1,0 +1,12 @@
+name: Paragraphs Collapsible
+type: module
+description: Improves paragraphs widget by adding collapsible feature
+core_version_requirement: ^8 || ^9 || ^10 || ^11
+package: Paragraphs
+dependencies:
+  - paragraphs:paragraphs
+
+# Information added by Drupal.org packaging script on 2024-04-16
+version: '8.x-1.6'
+project: 'paragraphs_collapsible'
+datestamp: 1713300894

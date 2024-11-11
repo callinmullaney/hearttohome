@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Save & Edit module.
+ */
+
+/**
+ * Remove dropbutton configuration
+ */
+function save_edit_update_8101() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('save_edit.settings');
+  $config->clear('dropbutton')->save();
+}
+
+/**
+ * Add new option to automatically add/rm content types to config
+ */
+function save_edit_update_8102() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('save_edit.settings');
+  if (!$config->get('enable_node_types_automatically')) {
+    $config->set('enable_node_types_automatically', 0)->save();
+  }
+}
+
+/**
+ * Add option for primary actions in Gin theme
+ */
+function save_edit_update_8103() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('save_edit.settings');
+  if (!$config->get('gin_primary')) {
+    $config->set('gin_primary', 0)->save();
+  }
+}

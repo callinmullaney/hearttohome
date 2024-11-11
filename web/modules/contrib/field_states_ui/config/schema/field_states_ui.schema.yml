@@ -1,0 +1,37 @@
+field.widget.third_party.field_states_ui:
+  type: mapping
+  label: 'Field States UI'
+  mapping:
+    field_states:
+      type: sequence
+      sequence:
+        type: mapping
+        mapping:
+          id:
+            type: string
+          data:
+            type: field_states_ui.state.[$%parent.id]
+          uuid:
+            type: string
+
+field_states_ui.state.*:
+  type: mapping
+  label: 'Field State API configuration'
+  mapping:
+    target:
+      type: string
+      label: 'Target field'
+    comparison:
+      type: string
+      label: 'Comparison function'
+    value:
+      type: string
+      label: 'Value to check for/against'
+
+field_states_ui.state.visible:
+  type: field_state
+  label: 'Visible'
+
+field_states_ui.state.required:
+  type: field_state
+  label: 'Required'

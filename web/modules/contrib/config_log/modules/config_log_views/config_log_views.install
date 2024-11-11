@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Updates the display view with more information
+ *
+ */
+function config_log_views_update_8001() {
+  // Revert (re-import) the config_log view.
+  $viewName = 'config_log';
+  if (\Drupal::moduleHandler()->moduleExists('views')) {
+    $config_path = \Drupal::service('extension.list.module')->getPath('config_log_views') . '/config/install/views.view.' . $viewName . '.yml';
+    $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
+    \Drupal::configFactory()->getEditable('views.view.' . $viewName)->setData($data)->save(TRUE);
+  }
+}
+
+/**
+ * config_log_uninstall
+ *
+ * @return void
+ */
+function config_log_views_uninstall() {
+  // Remove the view during uninstall.
+  try {
+    \Drupal::configFactory()->getEditable('views.view.config_log')->delete();
+  }
+  catch (\Exception $e) {
+    \Drupal::logger('config_log')->warning('Unable to uninstall config: views.view.config_log');
+  }
+}

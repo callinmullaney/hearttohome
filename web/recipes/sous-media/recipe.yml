@@ -1,0 +1,25 @@
+name: 'Sous Media'
+description: 'A recipe that contains modules and configuration for Sous media.'
+type: 'Site'
+install:
+  # Core modules
+  - file
+  - image
+  - link
+  - media
+  - media_library
+  - taxonomy
+  - views
+  # Contrib modules
+  - dropzonejs
+  - field_group
+  - focal_point
+  - media_library_edit
+config:
+  import:
+    # Core.
+    image: '*'
+    media: '*'
+    media_library: '*'
+    # Contrib.
+    focal_point: '*'

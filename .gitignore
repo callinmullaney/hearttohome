@@ -63,24 +63,24 @@ Thumbs.db
 !core/**/*.gz
 
 # Ignore non-custom parts of Drupal.
-web/core
-web/libraries
-web/modules/contrib
-web/modules/features
-web/profiles/contrib
-web/recipes
-web/themes/contrib
-web/.gitignore
+# web/core
+# web/libraries
+# web/modules/contrib
+# web/modules/features
+# web/profiles/contrib
+# web/recipes
+# web/themes/contrib
+# web/.gitignore
 
 # Ignore Composer-managed dependencies.
-vendor/
+# vendor/
 
 # Node modules.
-node_modules/
+# node_modules/
 
 # Ignore generated linting files
-/web/.eslintignore
-/web/.eslintrc
+# /web/.eslintignore
+# /web/.eslintrc
 
 # VS Code generated files/folders
 .vscode
@@ -89,41 +89,24 @@ node_modules/
 .idea
 
 # Lando app
-app
-mods_disabled.local
-.editorconfig
-.gitattributes
-.csslintrc
-.eslintignore
-.eslintrc.json
-.ht.router.php
-.htaccess
-INSTALL.txt
-README.txt
-autoload.php
-example.gitignore
-index.php
-robots.txt
-update.php
-web.config
+# app
+# mods_disabled.local
+# .editorconfig
+# .gitattributes
+# .csslintrc
+# .eslintignore
+# .eslintrc.json
+# .ht.router.php
+# .htaccess
+# INSTALL.txt
+# README.txt
+# autoload.php
+# example.gitignore
+# index.php
+# robots.txt
+# update.php
+# web.config
 
 # Local reference files.
 /reference/**/*
 !/reference/.gitkeep
-
-# Remove me after sous install
-README.txt
-development.services.yml
-example.settings.local.php
-example.sites.php
-default.services.yml
-default.settings.php
-settings.php
-composer.lock
-
-# Remove me after development
-web/themes/
-.lando.yml
-/composer.json
-scripts/
-assets/scaffold/recipes/sous_base/recipe.yml

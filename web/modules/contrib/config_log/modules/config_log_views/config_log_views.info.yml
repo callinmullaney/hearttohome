@@ -1,0 +1,13 @@
+name: Configuration Log Views
+type: module
+description: 'Views integration for the Configuration log module.'
+package: Configuration
+core_version_requirement: ^10 || ^11
+configure: config_log.admin
+dependencies:
+  - drupal:config_log
+
+# Information added by Drupal.org packaging script on 2024-09-02
+version: '4.0.1'
+project: 'config_log'
+datestamp: 1725279412

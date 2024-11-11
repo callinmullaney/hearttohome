@@ -1,0 +1,19 @@
+{
+    "name": "fourkitchens/sous-paragraphs",
+    "description": "A collection of recipes and configuration for Sous with Paragraphs.",
+    "keywords": ["recipe", "Drupal recipes", "drupal recipe"],
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Laura Johnson",
+            "role": "Maintainer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "fourkitchens/sous-content-types": "dev-main",
+        "fourkitchens/sous-paragraph-types": "dev-main",
+        "drupal/paragraphs_features": "^2.0@beta"
+    }
+}
