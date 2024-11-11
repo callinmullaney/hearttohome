@@ -1,9 +1,11 @@
-uuid: c5daa76b-002e-4f0c-ab17-15f2ac63f542
+uuid: 6623328a-043a-4691-b131-739d609c5260
 langcode: en
 status: true
 dependencies:
   module:
     - file
+_core:
+  default_config_hash: TsWvrelV_aWQm-METOedL4rb2ous5kUO_kFSqTpAz7E
 id: file.token
 label: Token
 description: ''

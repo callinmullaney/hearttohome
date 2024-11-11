@@ -1,0 +1,22 @@
+uuid: 0c5b8487-50f4-4db7-bad1-6fba44af2edf
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hearttohome
+_core:
+  default_config_hash: T0wbI6qVdThbbIqXDZFg_1VZ3_ittXBdEoUH7d7ux_E
+id: hearttohome_local_tasks
+theme: hearttohome
+region: content
+weight: -20
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

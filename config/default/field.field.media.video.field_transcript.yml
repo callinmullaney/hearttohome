@@ -1,4 +1,4 @@
-uuid: ce325cb3-c1c4-4dc9-8a78-1deaaffd789a
+uuid: c8f534f2-e0f3-457b-bb01-4e163b51080a
 langcode: en
 status: true
 dependencies:
@@ -7,6 +7,8 @@ dependencies:
     - media.type.video
   module:
     - link
+_core:
+  default_config_hash: tRZdcvuf4pteQnB0G6RuOlsUnmitemaTq-qA3KhP1kw
 id: media.video.field_transcript
 field_name: field_transcript
 entity_type: media

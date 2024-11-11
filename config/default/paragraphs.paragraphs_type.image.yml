@@ -1,4 +1,4 @@
-uuid: 8fe11adf-e96b-4e3f-a455-7a0f75ec6efe
+uuid: b63375de-1492-4d0b-b055-bbdc699a2419
 langcode: en
 status: true
 dependencies:
@@ -10,6 +10,8 @@ third_party_settings:
   paragraphs_ee:
     paragraphs_categories:
       media_components: media_components
+_core:
+  default_config_hash: Zj0W_kWvgwbI_6SvpsZz60MJV05WnnQsd5B3mp3sX6Y
 id: image
 label: Image
 icon_uuid: 0ab249e7-6b1c-4b55-864d-a3cb8ac9652e

@@ -1,18 +1,13 @@
-uuid: 98df81db-ed03-4a07-a69a-cda995483108
+uuid: 75eec58a-7614-404a-99cc-2d8be0d241bc
 langcode: en
 status: true
-dependencies:
-  module:
-    - menu_ui
-third_party_settings:
-  menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+dependencies: {  }
+_core:
+  default_config_hash: msmyh6dDM4FHJ6HP2Wtsr3oagSzagaFRwPGbLbozElA
 name: Page
 type: page
-description: 'A general content type for all standard pages.'
-help: ''
+description: 'A basic page content type.'
+help: null
 new_revision: true
-preview_mode: 0
+preview_mode: 1
 display_submitted: false

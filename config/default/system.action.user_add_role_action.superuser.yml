@@ -1,0 +1,14 @@
+uuid: a2b07f3a-fe05-4f29-8ad8-1468165286a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.superuser
+  module:
+    - user
+id: user_add_role_action.superuser
+label: 'Add the Superuser role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: superuser

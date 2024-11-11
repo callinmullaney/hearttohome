@@ -1,4 +1,4 @@
-uuid: 9b1d873f-c897-4cc1-9a3a-52c0a942e883
+uuid: 357d2ed5-ea2d-4a9c-9d16-52b9829e5a41
 langcode: en
 status: true
 dependencies:
@@ -6,14 +6,9 @@ dependencies:
     - field.storage.media.field_description
     - media.type.video
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    basic_html: basic_html
-    restricted_html: '0'
-    full_html: '0'
-    plain_text: '0'
+_core:
+  default_config_hash: N3WS745R-N-Aw8PUUa3lYmFWW39vxYMivpc6Y6HS2Ho
 id: media.video.field_description
 field_name: field_description
 entity_type: media

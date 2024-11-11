@@ -1,10 +1,12 @@
-uuid: 717b92eb-b75b-43b7-a2a4-58c7495116c7
+uuid: 53f14000-8d4d-44c4-bbf4-73a2ea3b67f4
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_seo_title
     - node.type.page
+_core:
+  default_config_hash: FvVvtL1TiPaX6PkzOGMmjCcsuOUTY-ZhfUhERnbTM0g
 id: node.page.field_seo_title
 field_name: field_seo_title
 entity_type: node

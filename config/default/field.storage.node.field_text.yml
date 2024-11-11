@@ -1,0 +1,21 @@
+uuid: 6a259196-70a2-459b-bc23-3b61b8bcdbd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: hNWzRI6pqOCwevsj8YE0nUUuZftIsuHp1PMmIdSld5Y
+id: node.field_text
+field_name: field_text
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,4 +1,4 @@
-uuid: 0707a1e9-8e61-46c0-b0a0-0585fb829acd
+uuid: 0915efc7-3638-4ad8-bf06-df730a5745c0
 langcode: en
 status: true
 dependencies:
@@ -10,6 +10,8 @@ third_party_settings:
   paragraphs_ee:
     paragraphs_categories:
       text_components: text_components
+_core:
+  default_config_hash: IxNUoOilC17sLFPYXCxDd9afXwztQOXlvLbQelNlUVk
 id: text_with_media
 label: 'Text with Media'
 icon_uuid: 8d3fa77f-16fe-488b-b8a0-8f890c793594

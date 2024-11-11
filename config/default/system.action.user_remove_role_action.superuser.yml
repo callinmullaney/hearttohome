@@ -1,0 +1,14 @@
+uuid: 90e7858d-ed62-4331-aff5-61989deffd8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.superuser
+  module:
+    - user
+id: user_remove_role_action.superuser
+label: 'Remove the Superuser role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: superuser

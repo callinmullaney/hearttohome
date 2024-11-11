@@ -1,7 +1,9 @@
-uuid: e7cbf866-10ce-402a-bd71-9b6d9eb6992c
+uuid: b2791764-a52d-4cd6-931a-20b8ae40741d
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: KpaMs-V98vsgcJaJal4Wxt7rAlxACrZ5a7bIzNb-Qxw
 id: video
 label: Video
 description: ''

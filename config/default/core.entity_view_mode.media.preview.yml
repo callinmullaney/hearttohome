@@ -1,9 +1,11 @@
-uuid: e24a2ae5-4807-4168-85cc-d1030c875e8d
+uuid: 068e6f2c-a68e-48ba-a895-1a217ed8b586
 langcode: en
 status: true
 dependencies:
   module:
     - media
+_core:
+  default_config_hash: bWXimoE1eU1LE3AakR8roJA6JfWKTR3jQ7Z6LWejylQ
 id: media.preview
 label: Preview
 description: ''

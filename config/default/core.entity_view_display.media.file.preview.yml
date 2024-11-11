@@ -1,4 +1,4 @@
-uuid: 5202ad56-13f5-4db2-8c9c-627066bfbd07
+uuid: 3160b91f-a922-4e58-ac1d-bef96a71879a
 langcode: en
 status: true
 dependencies:
@@ -11,6 +11,8 @@ dependencies:
     - media.type.file
   module:
     - image
+_core:
+  default_config_hash: Chno-9mUWQ3vdWH4XtyHuV9B2TGkHsdrWJTZkt2enjE
 id: media.file.preview
 targetEntityType: media
 bundle: file

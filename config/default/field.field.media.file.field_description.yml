@@ -1,4 +1,4 @@
-uuid: 5d90eeb3-83e7-456b-9297-94fb9a13f5a8
+uuid: 99776029-0452-427f-b98f-59c7c7b62106
 langcode: en
 status: true
 dependencies:
@@ -6,14 +6,9 @@ dependencies:
     - field.storage.media.field_description
     - media.type.file
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    basic_html: basic_html
-    restricted_html: '0'
-    full_html: '0'
-    plain_text: '0'
+_core:
+  default_config_hash: 7qEpB3bSyjta37gceuQGHCWQALgBoHsFO-GScpTh1Lk
 id: media.file.field_description
 field_name: field_description
 entity_type: media

@@ -1,19 +1,15 @@
-uuid: 25046983-c055-45b4-8645-a7478749eb92
+uuid: 1a546954-f2e6-4e46-991a-1c003b50e4b5
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_text
+    - filter.format.basic_html
     - paragraphs.paragraphs_type.text
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    basic_html: '0'
-    restricted_html: '0'
-    full_html: '0'
-    plain_text: '0'
+_core:
+  default_config_hash: 97W08PhR5vkhUDJ9Ku1B0hO2emTvn_OH73YC0VV7Yq0
 id: paragraph.text.field_text
 field_name: field_text
 entity_type: paragraph
@@ -25,5 +21,6 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  allowed_formats: {  }
+  allowed_formats:
+    - basic_html
 field_type: text_long

@@ -1,7 +1,9 @@
-uuid: 0aa32a80-3efb-4496-89ea-b36bfdd0b531
+uuid: 04f877d0-4d78-41f2-99ca-f54dbd9a498e
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: cLsa6AZ6jiyDIfcEwXSTcmTlfF0Z7aqnHY9F5-q21qc
 id: image
 label: Image
 description: ''

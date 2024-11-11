@@ -1,10 +1,12 @@
-uuid: 644f0797-96ef-487d-8557-615e1da08511
+uuid: 85132479-6499-4a77-a067-9598b35387e3
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.media.field_copyright
     - media.type.video
+_core:
+  default_config_hash: hETRrCY07YPoZclYENyFJsr0YTWEEkejH-5F4KBML6c
 id: media.video.field_copyright
 field_name: field_copyright
 entity_type: media

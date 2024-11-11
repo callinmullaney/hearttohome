@@ -1,4 +1,4 @@
-uuid: d3cd6d29-d41c-43b8-b523-6de9c46df093
+uuid: 004172b1-fa23-498b-866e-039454c6b1b6
 langcode: en
 status: true
 dependencies:
@@ -9,6 +9,8 @@ dependencies:
     - paragraphs.paragraphs_type.text_with_media
   module:
     - text
+_core:
+  default_config_hash: dTRYvOUo1SpWzRbsMrNelwW5rjnnP_ZOZeHbzt6a8Q4
 id: paragraph.text_with_media.default
 targetEntityType: paragraph
 bundle: text_with_media

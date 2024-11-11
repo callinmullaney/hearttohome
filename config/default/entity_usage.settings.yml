@@ -1,0 +1,4 @@
+local_task_enabled_entity_types:
+  - media
+track_enabled_base_fields: true
+usage_controller_items_per_page: 25

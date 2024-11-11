@@ -1,7 +1,9 @@
-uuid: 7629901a-d75f-4c22-a2c3-a45e8b1e8d75
+uuid: 8ed1d807-d42e-4980-876f-6d5b8482b54b
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: wS9n7M5mGCUUyHo3rnJYO-1-21P6gHLXWQl7WhgW7ls
 id: media_components
 label: 'Media Components'
 description: ''

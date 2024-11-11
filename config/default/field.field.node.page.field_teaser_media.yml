@@ -1,4 +1,4 @@
-uuid: 391d94fa-b8c3-4e67-b80c-24f775954c6e
+uuid: 1498ff86-dd7f-4d3a-851c-475bf4e9ab33
 langcode: en
 status: true
 dependencies:
@@ -6,13 +6,15 @@ dependencies:
     - field.storage.node.field_teaser_media
     - media.type.image
     - node.type.page
+_core:
+  default_config_hash: O4f6mU-QngdaYyI1_OVbrt4o41NwUwKDgi5ibd8M9Kk
 id: node.page.field_teaser_media
 field_name: field_teaser_media
 entity_type: node
 bundle: page
 label: 'Teaser Media'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -24,6 +26,6 @@ settings:
     sort:
       field: _none
       direction: ASC
-    auto_create: false
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

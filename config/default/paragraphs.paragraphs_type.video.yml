@@ -1,4 +1,4 @@
-uuid: 8bb80808-c073-4784-9d0e-cefadb1253c1
+uuid: 2f65963b-f683-4925-9ba0-68ea83a3cda2
 langcode: en
 status: true
 dependencies:
@@ -10,6 +10,8 @@ third_party_settings:
   paragraphs_ee:
     paragraphs_categories:
       media_components: media_components
+_core:
+  default_config_hash: _roTsOc1n_k4bVJYUfYkBdIsVQ-Pq4AA1KvIagCRinI
 id: video
 label: Video
 icon_uuid: aad823a1-6a2b-4033-be46-9082f45e2d2a

@@ -1,4 +1,4 @@
-uuid: d0c64bfc-7ca5-43f6-a404-02865f1b6b3e
+uuid: e2cd5e3f-3823-4fbc-a5dc-0631d9033bb3
 langcode: en
 status: true
 dependencies:
@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.text_with_media
   module:
     - options
+_core:
+  default_config_hash: 2RO8eMkNH8Lcw2nClZwFsmIR9xUUAZr29VQ9p8RLBCo
 id: paragraph.text_with_media.field_media_alignment
 field_name: field_media_alignment
 entity_type: paragraph

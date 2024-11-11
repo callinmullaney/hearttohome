@@ -1,4 +1,4 @@
-uuid: 29da7264-7461-4258-8a12-6b3518aae1f4
+uuid: c5b1ef0c-6eef-449b-a6df-d9c6c5d11f15
 langcode: en
 status: true
 dependencies:
@@ -13,6 +13,8 @@ dependencies:
   enforced:
     module:
       - media_library
+_core:
+  default_config_hash: 9u9hwW-Q0-uQJz1vgenJTQhZGYN0FBZoOogwPD6kgkQ
 id: media_library
 label: 'Media library'
 module: views
@@ -137,6 +139,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 24
           total_pages: null
           id: 0
@@ -1170,7 +1173,7 @@ display:
             custom_date_format: ''
             timezone: ''
             tooltip:
-              date_format: ''
+              date_format: long
               custom_date_format: ''
             time_diff:
               enabled: false

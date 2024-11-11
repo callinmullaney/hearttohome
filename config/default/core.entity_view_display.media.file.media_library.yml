@@ -1,4 +1,4 @@
-uuid: b379026a-fd68-4c48-bec9-e1246801baf5
+uuid: d0f30d0d-d43c-4c7b-8ee8-101075463340
 langcode: en
 status: true
 dependencies:
@@ -11,6 +11,8 @@ dependencies:
     - media.type.file
   module:
     - image
+_core:
+  default_config_hash: D3tGwcT6di0sBwbEe27Pfz_MsYpAU_0Kzd3mb6_6QN0
 id: media.file.media_library
 targetEntityType: media
 bundle: file

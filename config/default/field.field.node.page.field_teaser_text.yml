@@ -1,17 +1,19 @@
-uuid: 1f4ed752-4622-42e3-a3ca-3893401b5560
+uuid: ba2e7292-313d-447c-b51a-aa5b8e7376ef
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_teaser_text
     - node.type.page
+_core:
+  default_config_hash: qWKNookvgJWoHegfG_6I6XzHZo4m6zWhY19DChQ94BU
 id: node.page.field_teaser_text
 field_name: field_teaser_text
 entity_type: node
 bundle: page
 label: 'Teaser Text'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

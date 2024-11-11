@@ -1,0 +1,20 @@
+uuid: e35c5534-dc79-4257-8815-afcf3946bbd8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hearttohome
+_core:
+  default_config_hash: ABoKnlk20KHqZRw_2Qr4EvaFvH4lnQ2nuhunHeE1JIU
+id: hearttohome_local_actions
+theme: hearttohome
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

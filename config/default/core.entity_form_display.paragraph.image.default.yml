@@ -1,4 +1,4 @@
-uuid: 786ed500-530c-46de-8e5d-57306719a9c8
+uuid: 7b102b26-9f06-4578-a6d8-d609503b4054
 langcode: en
 status: true
 dependencies:
@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.image
   module:
     - media_library
+_core:
+  default_config_hash: QnzW1rOGR_HufL-Fk_9z2GdEU0dG8yFP0FfoTnQnmfI
 id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image

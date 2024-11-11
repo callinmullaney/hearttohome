@@ -1,0 +1,5 @@
+log_ignored_config: {  }
+log_ignored_config_negate: false
+log_destination:
+  custom: custom
+ignore_no_changes: false

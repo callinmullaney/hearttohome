@@ -1,9 +1,11 @@
-uuid: a55dbdfa-d924-490d-906b-c359c7a9b564
+uuid: a13b341e-e0cb-4120-aa6f-8b8eab08a8d4
 langcode: en
 status: false
 dependencies:
   module:
     - media
+_core:
+  default_config_hash: dTfAUHooYV0uOVPO3saGpgv-c5PppJXDwxvwRTJOycM
 id: media.full
 label: 'Full content'
 description: ''

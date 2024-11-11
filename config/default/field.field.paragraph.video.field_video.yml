@@ -1,4 +1,4 @@
-uuid: 40b30bf5-f008-42c0-a1e2-8286bf99676d
+uuid: ce436b34-c584-4605-8fd9-280c0ecf56e7
 langcode: en
 status: true
 dependencies:
@@ -6,6 +6,8 @@ dependencies:
     - field.storage.paragraph.field_video
     - media.type.video
     - paragraphs.paragraphs_type.video
+_core:
+  default_config_hash: fYGhEe-lV7NoDbl_3ueSgicR2px-vYQz5sIfHFBHoIU
 id: paragraph.video.field_video
 field_name: field_video
 entity_type: paragraph

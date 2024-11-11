@@ -1,8 +1,11 @@
-uuid: a68a32a0-30af-42b3-9e45-bf0c2f70520e
+uuid: 3ae9cf76-d408-45cb-9026-ab196e02260d
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: u-blKFqP5YotptDQRpm4F7ccYd1phMbPeuOYxwYVJDg
 name: 'Media Tags'
 vid: media_tags
-description: ''
+description: null
 weight: 0
+new_revision: false

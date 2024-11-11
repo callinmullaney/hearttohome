@@ -1,0 +1,9 @@
+button_value: ''
+button_weight: '-10'
+gin_primary: false
+unpublish: false
+unpublish_new_only: false
+hide_default_save: false
+enable_node_types_automatically: false
+node_types:
+  page: '0'

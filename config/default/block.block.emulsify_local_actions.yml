@@ -1,0 +1,20 @@
+uuid: 02f41b3f-9d7b-40bf-bafb-e04ff65f7fb1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - emulsify
+_core:
+  default_config_hash: ABoKnlk20KHqZRw_2Qr4EvaFvH4lnQ2nuhunHeE1JIU
+id: emulsify_local_actions
+theme: emulsify
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

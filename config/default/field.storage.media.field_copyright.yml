@@ -1,9 +1,11 @@
-uuid: 908ba3dc-8941-4919-a968-03187d19529a
+uuid: 64b654e5-1baf-47df-b224-0d926838a6f6
 langcode: en
 status: true
 dependencies:
   module:
     - media
+_core:
+  default_config_hash: qrC0gToIQvJZmAs6P0e3-gR6_qJ4O9VBvOxvGbVIvVs
 id: media.field_copyright
 field_name: field_copyright
 entity_type: media

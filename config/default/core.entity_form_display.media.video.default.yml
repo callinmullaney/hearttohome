@@ -1,4 +1,4 @@
-uuid: 3b80f402-0057-440f-a200-926fe3e6982e
+uuid: 95082250-6540-4cf5-9c82-378f99182926
 langcode: en
 status: true
 dependencies:
@@ -63,6 +63,8 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
+_core:
+  default_config_hash: 8V4xZpPFVRVkNtRKi-o3Ray4c5R3FX4Tioa4d-atQ_k
 id: media.video.default
 targetEntityType: media
 bundle: video

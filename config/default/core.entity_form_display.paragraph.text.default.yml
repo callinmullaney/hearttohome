@@ -1,4 +1,4 @@
-uuid: 2c717015-d161-46da-9e56-8fc3ac0d798f
+uuid: a4bef3d0-4e5d-49e0-95a7-024515b2c7b6
 langcode: en
 status: true
 dependencies:
@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.text
   module:
     - text
+_core:
+  default_config_hash: V2bRCWt5jbciY9edKtgB7ngTa1xgK1ATuGSfrpgll28
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text

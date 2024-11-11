@@ -1,4 +1,4 @@
-uuid: 115ac95c-d5d0-431e-945f-26be76168268
+uuid: 2d96b8cb-e862-40eb-95ee-a1101810c302
 langcode: en
 status: true
 dependencies:
@@ -6,6 +6,8 @@ dependencies:
     - field.storage.media.field_tags
     - media.type.image
     - taxonomy.vocabulary.media_tags
+_core:
+  default_config_hash: z9e3Dqau3GCVMpXYLM4Shah55qS8YrZ-Xwxkc_cwPJs
 id: media.image.field_tags
 field_name: field_tags
 entity_type: media

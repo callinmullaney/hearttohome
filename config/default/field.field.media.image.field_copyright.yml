@@ -1,10 +1,12 @@
-uuid: 103695dd-2ea3-4f25-88c4-09308cbdc858
+uuid: e6e48946-5087-4e90-9a6e-89d50f5ecc92
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.media.field_copyright
     - media.type.image
+_core:
+  default_config_hash: mzYCKMoSfd5CSZBMyELJN7krVqJ_2dngHT3Ei7Lg_gY
 id: media.image.field_copyright
 field_name: field_copyright
 entity_type: media

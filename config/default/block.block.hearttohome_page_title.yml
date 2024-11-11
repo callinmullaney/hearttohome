@@ -1,0 +1,20 @@
+uuid: 8a56b4a5-4631-4a94-be58-95c15c524852
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hearttohome
+_core:
+  default_config_hash: Oh72CHUkp6cj6dbrXMK2hzCsM05w9cHVoD22rMLQUfk
+id: hearttohome_page_title
+theme: hearttohome
+region: content
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

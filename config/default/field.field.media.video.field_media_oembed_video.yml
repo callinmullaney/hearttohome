@@ -1,10 +1,12 @@
-uuid: 3f206ad3-1a97-423d-a099-c7bf394ad3e2
+uuid: be18a40b-ae3a-433f-9935-5997d643e411
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.media.field_media_oembed_video
     - media.type.video
+_core:
+  default_config_hash: 7ZWA6XCZs6LFefWUNcfH8wQ0cA2SepIKWhF7wWt_D5A
 id: media.video.field_media_oembed_video
 field_name: field_media_oembed_video
 entity_type: media

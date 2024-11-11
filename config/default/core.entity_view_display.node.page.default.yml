@@ -1,38 +1,58 @@
-uuid: f7428738-cdec-419c-8666-6a0c022c15fc
+uuid: 3c5782be-2902-4888-a5d5-0ba88cbe4d10
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.field_content_body
+    - field.field.node.page.field_content
     - field.field.node.page.field_metadata
     - field.field.node.page.field_seo_title
-    - field.field.node.page.field_tags
     - field.field.node.page.field_teaser_media
     - field.field.node.page.field_teaser_text
+    - field.field.node.page.field_text
     - node.type.page
   module:
     - entity_reference_revisions
+    - text
     - user
 _core:
-  default_config_hash: r1tD2d3xfgugcFCakPpaMsHLgkoF0C5up8qu-Ku9v1w
+  default_config_hash: 1uhHmHV4w4Ye4xc8piBcIxUA5zW7-Jz6tV9dc552ecU
 id: node.page.default
 targetEntityType: node
 bundle: page
 mode: default
 content:
-  field_content_body:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_content:
     type: entity_reference_revisions_entity_view
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 0
+    weight: 10
+    region: content
+  field_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   field_metadata: true
   field_seo_title: true
-  field_tags: true
   field_teaser_media: true
   field_teaser_text: true
-  links: true
+  published_at: true

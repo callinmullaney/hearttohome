@@ -1,4 +1,4 @@
-uuid: fc945d8e-1510-4eac-9b70-0f8f3cd1118d
+uuid: dd4b3230-6cbc-447e-bf00-736ed37553c1
 langcode: en
 status: true
 dependencies:
@@ -56,6 +56,8 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
+_core:
+  default_config_hash: OfYCskBquJ4D8HLdbvsupgnP2Jm84oplUCi1CRmcaAs
 id: media.file.default
 targetEntityType: media
 bundle: file

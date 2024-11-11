@@ -1,4 +1,4 @@
-uuid: 4e6d93a1-ae8b-4d3c-93f7-0c6146a1c444
+uuid: 58030d50-68be-4d9c-8842-a9dfe1787b4e
 langcode: en
 status: true
 dependencies:
@@ -7,6 +7,8 @@ dependencies:
     - media.type.image
     - media.type.video
     - paragraphs.paragraphs_type.text_with_media
+_core:
+  default_config_hash: FrdahiIkRHsfLHpbAyx8QM_29cNXvIndiS-FwP0YOJo
 id: paragraph.text_with_media.field_media
 field_name: field_media
 entity_type: paragraph

@@ -1,0 +1,22 @@
+uuid: b7b427ad-29a7-45d8-93e4-742bcf3e0530
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hearttohome
+_core:
+  default_config_hash: aeqlWs7HwctZeZC7ADcbxfqehJzBRfZKmuZz3DsH3_4
+id: hearttohome_messages
+theme: hearttohome
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }
